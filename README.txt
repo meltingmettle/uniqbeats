@@ -6,7 +6,7 @@
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 (1) Text Processing
 
-### Description: The musical content of MIDI files can be encaspsulated in their respected CSV files.
+### Description: The musical content of MIDI files can be encapsulated in their respected CSV files.
 CSV files can be converted into much simpler strings of symbols. Symbolic abstraction: a given intelligence
 doesn't need to know what the concept of 'music' is, nor does it have to be able to appreciate the beauty 
 of good music; rather, it just needs to see and learn the symbolic patterns behind the masterpieces in order 
