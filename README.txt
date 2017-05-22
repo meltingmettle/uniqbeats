@@ -6,11 +6,11 @@
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 (1) Text Processing
 
-### Description: The musical content of MIDI files can be encapsulated in their respected CSV files.
-CSV files can be converted into much simpler strings of symbols. Symbolic abstraction: a given intelligence
+### Description: The musical content of MIDI files can be encapsulated in their respective CSV.
+CSV format can be converted into simpler strings of symbols. Symbolic abstraction: a given intelligence
 doesn't need to know what the concept of 'music' is, nor does it have to be able to appreciate the beauty 
-of good music; rather, it just needs to see and learn the symbolic patterns behind the masterpieces in order 
-to ultimately be able to generate its own symbols, which we then reinterpret as CSV and ultimately MIDI files.
+of good music; it just needs to see and learn the symbolic patterns behind the masterpieces in order 
+to be able to generate its own symbols, which we then reinterpret as CSV and ultimately as MIDI files.
 
 ### Components:
 
@@ -35,5 +35,10 @@ to ultimately be able to generate its own symbols, which we then reinterpret as 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 (3) Training Data Streaming
 
-### Description: <SPECIFICS ARE CURRENTLY BEING HANDLED>
+### Description: We want to be able to implement a continuously updated stream of select musical 
+compositions that are readily converted to CSV and then into the feed-language that our AI will 
+then be able to read. 
+
+### ACCEPTABLE GENRES: Classical Music, Swing, Blues
+### EX OF UNACCEPTABLE GENRES: Free-form Jazz, Folk/Cultural Music, <Anything with a pentatonic scale>
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
