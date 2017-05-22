@@ -16,12 +16,5 @@ def read_file(filename):
 	return data
 
 # Operation to read all text files in the directory
-def read_all():
-	"""all of the text files names in the variable
-	'all_filenames' are read and placed in a list"""
-	for filename in all_filenames:
-		string_queue.add(read_file(filename))
-	return string_queue
-
-# Stores all prepared strings in one list 
-ready_strings = read_all()
+for filename in all_filenames:
+	string_queue.add(read_file(filename))
