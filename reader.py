@@ -3,18 +3,16 @@
 ########################
 
 # Copies all filenames for all text files in the directory.
-# Preps all filenames for reading.
 import glob
 all_filenames, string_queue = glob.glob('*.txt'), []
 
-# Reads the text files and returns stripped strings of theeir contents.
 def read_file(filename):
-	"""takes in filename and returns string of 
-	all characters with all spaces removed"""
+	""" Takes in filename and returns string of 
+	all text content with spaces removed. """
 	with open(filename, 'r') as myfile:
 		data = myfile.read().replace('\n', '')
 	return data
 
 # Operation to read all text files in the directory
 for filename in all_filenames:
-	string_queue.add(read_file(filename))
+	string_queue.append(read_file(filename))
