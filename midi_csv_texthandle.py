@@ -1,7 +1,7 @@
 ###########################
 ### midi_csv_texthandle ###
 ###########################
-"""This custom processing script (1) cleans midi_csv, (2) tokenizes midi_csv, and then (3) maps
+"""This custom processing script (1) tokenizes pre-cleaned midi_csv and then (2) maps
 csv tokens to ASCII characters,
 """
 
