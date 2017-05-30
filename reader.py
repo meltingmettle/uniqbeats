@@ -1,6 +1,9 @@
-########################
-### TEXT FILE READER ###
-########################
+#################
+### reader.py ###
+#################
+""" This reader takes an input textfile containing midi_csv, cleans up the strings, and then
+spits out an edited text file for later usage. Modified for pipelined streaming.
+"""
 
 # Copies all filenames for all text files in the directory.
 import glob
