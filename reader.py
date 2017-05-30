@@ -18,12 +18,10 @@ def read_file(filename):
 
 def tokenize(data):
 	return data.split('\n')
-	
+
 def clean(token_list):
 	return 
 
 # Operation to read all text files in the directory
 for filename in all_filenames:
 	string_queue.append(clean(read_file(filename)))
-
-
