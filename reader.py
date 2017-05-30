@@ -25,7 +25,7 @@ def first_char(string):
 		i += 1
 	return string[i]
 
-def clean_token_list(token_list):
+def clean_metadata(token_list):
 	"""Assumption: header is included in the midi_csv file used.
 	Future: incorporate this to generalize for all possible files."""
 	return [token for token in token_list if first_char(token) == 'N']
@@ -34,4 +34,4 @@ def clean_token_list(token_list):
 for filename in all_filenames:
 	string_queue.append(tokenize(read_file(filename)))
 for i in range(len(string_queue) - 1):
-	string_queue[i] = clean_token_list(string_queue[i])
+	string_queue[i] = clean_metadata(string_queue[i])
