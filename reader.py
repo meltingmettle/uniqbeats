@@ -14,10 +14,16 @@ def read_file(filename):
 	all text content with spaces removed. """
 	with open(filename, 'r') as myfile:
 		data = myfile.read()
-		data_list = data.split('\n')
-	return data_list 
+	return data
+
+def tokenize(data):
+	return data.split('\n')
+	
+def clean(token_list):
+	return 
 
 # Operation to read all text files in the directory
 for filename in all_filenames:
-	string_queue.append(read_file(filename))
+	string_queue.append(clean(read_file(filename)))
+
 
