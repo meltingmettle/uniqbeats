@@ -19,8 +19,12 @@ def read_file(filename):
 def tokenize(data):
 	return data.split('\n')
 
-def clean(token_list):
-	return 
+def clean_header(token_list):
+	first = token_list.pop(0)
+	if first[0] == '0':
+		while token_list[0][0] == '1':
+			token_list.pop(0)
+	return token_list
 
 # Operation to read all text files in the directory
 for filename in all_filenames:
