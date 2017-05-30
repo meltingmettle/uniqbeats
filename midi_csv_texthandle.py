@@ -12,3 +12,4 @@ import tokenize
 
 _ASCII_PRINTABLES_LIST = string.printable
 _ASCII_CHARS_SET = set(''.join(map(str, [_ASCII_PRINTABLES_LIST[i] for i in range(88)])))
+

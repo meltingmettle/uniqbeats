@@ -7,11 +7,11 @@ and then (3) spits out an edited text file for later usage. Modified for pipelin
 
 # Copies all filenames for all text files in the directory.
 import glob
-all_filenames, string_queue = glob.glob('*.txt'), []
+chars, all_filenames, string_queue = set('HSTCENIP'), glob.glob('*.txt'), []
 
 def read_file(filename):
-	""" Takes in filename and returns string of 
-	all text content with spaces removed. """
+	"""Takes in filename and returns string of 
+	all text content."""
 	with open(filename, 'r') as myfile:
 		data = myfile.read()
 	return data
@@ -19,13 +19,19 @@ def read_file(filename):
 def tokenize(data):
 	return data.split('\n')
 
-def clean_header(token_list):
-	first = token_list.pop(0)
-	if first[0] == '0':
-		while token_list[0][0] == '1':
-			token_list.pop(0)
-	return token_list
+def first_char(string):
+	i = 0
+	while string[i] not in chars:
+		i += 1
+	return string[i]
 
-# Operation to read all text files in the directory
+def clean_token_list(token_list):
+	"""Assumption: header is included in the midi_csv file used.
+	Future: incorporate this to generalize for all possible files."""
+	return [token for token in token_list if first_char(token) == 'N']
+
+# Operation to read all text files in the directory and then clean the resulting strings
 for filename in all_filenames:
-	string_queue.append(clean(read_file(filename)))
+	string_queue.append(tokenize(read_file(filename)))
+for i in range(len(string_queue) - 1):
+	string_queue[i] = clean_token_list(string_queue[i])
