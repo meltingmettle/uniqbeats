@@ -7,7 +7,7 @@ and then (3) spits out an edited text file for later usage. Modified for pipelin
 
 # Copies all filenames for all text files in the directory.
 import glob
-chars, all_filenames, cleaned = set('HSTCENIP'), glob.glob('*.txt'), []
+chars, all_filenames, cleaned = set('HSTCENIP'), glob.glob('../uniqbeats/uniqbeats_training_data/*.txt'), []
 
 def read_file(filename):
 	"""Takes in filename and returns string of 
@@ -33,4 +33,6 @@ def clean_metadata(token_list):
 # Operation to read all text files in the directory and then clean the resulting strings
 for filename in all_filenames:
 	cleaned.append(clean_metadata(tokenize(read_file(filename))))
+
+print(cleaned)
 
