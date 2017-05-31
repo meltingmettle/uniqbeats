@@ -7,8 +7,9 @@ and then (3) spits out an edited text file for later usage. Modified for pipelin
 
 # Copies all filenames for all text files in the directory.
 import glob
+import string 
 all_filenames = glob.glob('../uniqbeats/training_data/*.txt')
-chars = set('HSTCENIP') 
+chars = set(string.uppercase) 
 cleaned = []
 
 def read_file(filename):
@@ -23,9 +24,15 @@ def tokenize(data):
 
 def first_char(string):
 	i = 0
-	while string[i] not in chars:
-		i += 1
+	try: 
+		while string[i] not in chars:
+			i += 1
+	except IndexError:
+		return None
 	return string[i]
+
+def clean_unsigned(token_list):
+	return [token for token in token_list]
 
 def clean_metadata(token_list):
 	"""Assumption: header is included in the midi_csv file used.
@@ -35,3 +42,5 @@ def clean_metadata(token_list):
 # Operation to read all text files in the directory and then clean the resulting strings
 for filename in all_filenames:
 	cleaned.append(clean_metadata(tokenize(read_file(filename))))
+
+print(cleaned)
