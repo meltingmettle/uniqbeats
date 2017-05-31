@@ -1,0 +1,68 @@
+05 30 17
+MEETING 00
+
+
+Text proc:
+* Need: numeric representation 
+   * Convert the cleaned token notes into numbers
+* Need: separate time 
+   * Time in midi_csv is in midiclocks (second numeric in each token)
+   * We want time measured in: mili-secs
+   * Problem: number in midi-csv is in midiclock
+
+
+AI Stuff:
+* Problem: specifics
+* Come up with good metric
+   * Idea: ratio, measure distances from C
+* Supervised model: 
+   * Option: go online and research music theory to manually find metric that we can put into (warning: subjective)
+      * Use that specific metric to inform the machine
+      * Have to tell the machine relationship between variables 
+      * Research ‘good music’
+* Unsupervised methods → find latent factors
+   * Models we can use: Multiple-regression, k-nearest-neighbor
+      * Problem: solidify statistical model we are using
+   * Pattern-seeking: learned metric (latent pattern in data)
+      * Use THAT metric to help us inform model
+   * Inform future compositions (possibly?)
+   * Specifics:
+      * Method 1: Clustering: sequences that sound good
+      * Method 2: ??
+* Solution(?): tell machine to play chord at specific time (x = time (break into milisecs), y = output note (note played or not)) 
+   * Engineering stuff:
+      * Relationship between x and y is the metric
+      * Put into matrix
+      * 3-note chords for simple case
+   * Supervised: set this relationship
+   * Unsupervised: machine finds latent pattern
+
+####################################################################################
+Goals:
+* AI/Data Processing
+   * Find out what we need to do:
+   * Specific metrics for data proc
+   * Defining “what is problem” with data-proc
+
+
+* Text-processing:
+   * Quantify pitch as a numeric (distance from middle C, negative is bass, positive treble)
+   * Quantify time
+      * What are the timestamps
+      * Convert timestamps to milisecs
+   * Setting each point of data as two-dimensional object (time and pitch)
+
+
+* Tools to Train With:
+   * TensorFlow → data-processing library
+   * Git → sharing and editing code quickly
+
+
+* New Meeting
+   * Next agenda:
+      * Meet other engineers (hopefully everyone should come)
+      * Discuss potential solutions to data proc problem
+      * Discuss engineering progress
+   * Friday 060917 
+      * 7:00 p.m. PDT | 10:00 p.m. EST | 7:30 a.m. IST | 10:00 a.m. SGT
+      * Google Hangouts
