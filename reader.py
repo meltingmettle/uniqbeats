@@ -42,5 +42,3 @@ def clean_metadata(token_list):
 # Operation to read all text files in the directory and then clean the resulting strings
 for filename in all_filenames:
 	cleaned.append(clean_metadata(tokenize(read_file(filename))))
-
-print(cleaned)
