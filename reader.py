@@ -9,7 +9,7 @@ and then (3) spits out an edited text file for later usage. Modified for pipelin
 import glob
 import string 
 all_filenames = glob.glob('../uniqbeats/training_data/*.txt')
-chars = set(string.uppercase) 
+chars = set(string.ascii_uppercase) 
 cleaned = []
 
 def read_file(filename):
@@ -42,3 +42,4 @@ def clean_metadata(token_list):
 # Operation to read all text files in the directory and then clean the resulting strings
 for filename in all_filenames:
 	cleaned.append(clean_metadata(tokenize(read_file(filename))))
+print(cleaned)
