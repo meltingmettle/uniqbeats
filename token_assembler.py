@@ -1,17 +1,9 @@
-"""This text converter and writer takes outputted data structs and then writes them into standard midi_csv text files
+"""This text converter and writer takes outputted data structs 
+and then writes them into standard midi_csv text files
 """
 
-# import brain0
-# import brain1
-# ...
-# import brainn
-
-import reader
-import midi_csv_texthandle
+import brain0
 import string
-
-cleaned = reader.run()
-workable_data = midi_csv_texthandle.run()
 
 def make_strings(token_atoms):
 	for i in range(len(token_atoms)):
@@ -46,6 +38,3 @@ def assemble_all(data_set):
 def run():
 	strings = assemble_all(workable_data)
 	return strings
-
-data_output = run()
-print(data_output == cleaned)
