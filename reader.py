@@ -1,6 +1,3 @@
-#################
-### reader.py ###
-#################
 """ This reader (1) takes input textfiles containing midi_csv, (2) cleans up the strings, 
 and then (3) spits out an edited text file for later usage. Modified for pipelined streaming.
 """
