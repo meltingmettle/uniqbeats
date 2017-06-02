@@ -25,7 +25,12 @@ def analyze_token(token_atoms):
 		raise ValueError("Error: non-Note token element")
 	return token_atoms
 
-def analyze_all(comp_list):
+def make_ints(analyzed_token_atoms):
+	for i in range(len(analyzed_token_atoms)):
+		analyzed_token_atoms[i] = int(analyzed_token_atoms[i])
+	return analyzed_token_atoms
+
+def convert_all(comp_list):
 	"""Takes a list of token_lists and returns a new 
 	list of token_list where each token_list contains
 	analyzed versions of its respective tokens. """
@@ -33,10 +38,9 @@ def analyze_all(comp_list):
 	for token_list in comp_list:
 		ref = []
 		for token in token_list:
-			token = split_token(token)
-			ref.append(analyze_token(token))
+			ref.append(make_ints(analyze_token(split_token(token))))
 		data_set.append(ref)
 	return data_set
 
 def run():
-	return analyze_all(cleaned)
+	return convert_all(cleaned)
