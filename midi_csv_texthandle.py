@@ -1,6 +1,3 @@
-###########################
-### midi_csv_texthandle ###
-###########################
 """This custom processing script (1) cleans pre-cleaned midi_csv and then (2) converts
 them into workable data structures.
 """
