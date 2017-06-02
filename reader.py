@@ -5,9 +5,10 @@
 and then (3) spits out an edited text file for later usage. Modified for pipelined streaming.
 """
 
-# Copies all filenames for all text files in the directory.
 import glob
 import string 
+
+# Copies all filenames for all text files in the directory.
 all_filenames = glob.glob('../uniqbeats/training_data/*.txt')
 chars = set(string.ascii_uppercase) 
 cleaned = []
