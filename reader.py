@@ -40,5 +40,7 @@ def clean_metadata(token_list):
 	return [token for token in token_list if first_char(token) == 'N']
 
 # Operation to read all text files in the directory and then clean the resulting strings
-for filename in all_filenames:
-	cleaned.append(clean_metadata(tokenize(read_file(filename))))         
+def run():
+	for filename in all_filenames:
+		cleaned.append(clean_metadata(tokenize(read_file(filename))))
+	return cleaned      
