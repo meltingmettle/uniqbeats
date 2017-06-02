@@ -31,9 +31,6 @@ def first_char(string):
 		return None
 	return string[i]
 
-def clean_unsigned(token_list):
-	return [token for token in token_list]
-
 def clean_metadata(token_list):
 	"""Assumption: header is included in the midi_csv file used.
 	Future: incorporate this to generalize for all possible files."""

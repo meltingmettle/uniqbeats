@@ -32,3 +32,6 @@ def analyze_all(comp_list):
 			ref.append(analyze_token(token))
 		data_set.append(ref)
 	return data_set
+
+def run():
+	return analyze_all(cleaned)
