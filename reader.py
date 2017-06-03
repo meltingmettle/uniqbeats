@@ -38,4 +38,4 @@ def clean_metadata(token_list):
 def run():
 	for filename in all_filenames:
 		cleaned.append(clean_metadata(tokenize(read_file(filename))))
-	return cleaned      
+	return cleaned    

@@ -1,26 +1,33 @@
 """This text converter and writer takes outputted data structs 
-and then writes them into standard midi_csv text files
+and then writes them into standard midi_csv text files.
 """
 
-import brain0
+# import brain0
+import reader
+import token_analyzer
 import string
 
-def make_strings(token_atoms):
-	for i in range(len(token_atoms)):
-		token_atoms[i] = str(token_atoms[i])
-	return token_atoms
+##########################################
+# Delete and replace with pipeline from AI
+workable_data = token_analyzer.run()
+##########################################
 
-def notify(token_atoms):
-	if token_atoms[2] == "1":
-		token_atoms[2] = "Note_on_c"
-	elif token_atoms[2] == "0":
-		token_atoms[2] = "Note_off_c"
+def make_strings(token_atom_list):
+	for i in range(len(token_atom_list)):
+		token_atom_list[i] = str(token_atom_list[i])
+	return token_atom_list
+
+def notify(token_atom_list):
+	if token_atom_list[2] == "1":
+		token_atom_list[2] = "Note_on_c"
+	elif token_atom_list[2] == "0":
+		token_atom_list[2] = "Note_off_c"
 	else:
 		raise ValueError("Error: non-Note token element")
-	return token_atoms
+	return token_atom_list
 
-def assemble_token(token_atoms):
-	new_token = ", ".join(token_atoms)
+def assemble_token(token_atom_list):
+	new_token = ", ".join(token_atom_list)
 	return new_token
 
 def assemble_all(data_set):
