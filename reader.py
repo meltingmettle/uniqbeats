@@ -12,15 +12,19 @@ cleaned = []
 
 def read_file(filename):
 	"""Takes in filename and returns string of 
-	all text content."""
+	all text content. """
 	with open(filename, 'r') as myfile:
 		data = myfile.read()
 	return data
 
 def tokenize(data):
+	"""Splits string into lines and puts lines
+	in a list. """
 	return data.split('\n')
 
 def first_char(string):
+	"""Finds the first element in the string 
+	that is in string.ascii_uppercase. """
 	i = 0
 	try: 
 		while string[i] not in chars:
@@ -29,10 +33,10 @@ def first_char(string):
 		return None
 	return string[i]
 
-def clean_metadata(token_list):
-	"""Assumption: header is included in the midi_csv file used.
-	Future: incorporate this to generalize for all possible files."""
-	return [token for token in token_list if first_char(token) == 'N']
+def clean_metadata(tokenized_comp):
+	"""Cleans extraneous info, leaving only the
+	Note values in each tokenized composition. """
+	return [token for token in tokenized_comp if first_char(token) == 'N']
 
 # Operation to read all text files in the directory and then clean the resulting strings
 def run():

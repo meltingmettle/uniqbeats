@@ -8,7 +8,7 @@ import string
 cleaned = reader.run()
 
 def split_token(token):
-	"""Splits a token into it's parts andd stores 
+	"""Splits a token into atomic parts and stores 
 	them in a list. """
 	atoms = token.split(", ")
 	return atoms
@@ -26,14 +26,16 @@ def analyze_token(token_atoms):
 	return token_atoms
 
 def make_ints(analyzed_token_atoms):
+	"""Makes the value of each token's atoms integers 
+	for data processing. """
 	for i in range(len(analyzed_token_atoms)):
 		analyzed_token_atoms[i] = int(analyzed_token_atoms[i])
 	return analyzed_token_atoms
 
 def convert_all(comp_list):
 	"""Takes a list of token_lists and returns a new 
-	list of token_list where each token_list contains
-	analyzed versions of its respective tokens. """
+	data_set consisting of lists of atomized and 
+	analyzed tokens for each composition in comp_list. """
 	data_set = []
 	for token_list in comp_list:
 		ref = []
