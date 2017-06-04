@@ -2,7 +2,6 @@
 and then writes them into standard midi_csv text files.
 """
 
-# import brain0
 import reader
 import token_analyzer
 import string
