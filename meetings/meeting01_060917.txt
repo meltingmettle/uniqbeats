@@ -1,0 +1,25 @@
+06 09 17
+MEETING 01
+
+Goals:
+######################
+- Research first machine learning model to use (Ric, Sai)
+
+- Intermediate data-proc file (And, Sai, Swa, Tae)
+	- Functionality: Functions to add middle-C distance 
+	- Functionality: Text proc skeleton functions
+
+Tests:
+######################
+- Test: import a dead brain file that will simply spit out data. test if TBM process works forward and backwards
+
+- Test: Andrew's intermediate file (simple inputs) 
+
+- Test: See if we can have entire platform work forwards and backwards with Andrew's additional file
+
+
+Next Meeting: 
+######################
+
+Thursday, June 15, 2017
+7:00 p.m. PDT | 10:00 p.m. EST | 7:30 a.m. IST | 10:00 a.m. SGT
